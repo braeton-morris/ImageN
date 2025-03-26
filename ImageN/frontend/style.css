@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+.bgGrid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, #eef2ff 1px, transparent 1px), linear-gradient(to bottom, #eef2ff 1px, transparent 1px);
+}
+
+* {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+span{
+    font-family: "Press Start 2P", system-ui;
+}
+
+.blueShadow {
+    box-shadow: 0px 14px 55px rgba(106, 96, 255, 0.35); /* Increased opacity from 0.35 to 0.55 */
+}
+
+.lightShadow {
+    position: relative;
+    overflow: hidden;
+}
+
+.lightShadow p {
+    position: relative;
+    z-index: 2;
+}
+
+.lightShadow::after {
+    position: absolute;
+    content: '';
+    background: navy;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    transition-duration: 400ms;
+    z-index: 0;
+}
+
+.lightShadow:hover::after {
+    transform: translateX(100%);
+}
+
+.whiteShadow {
+    position: relative;
+    overflow: hidden;
+}
+
+.whiteShadow p {
+    position: relative;
+    z-index: 2;
+}
+
+.whiteShadow::after {
+    position: absolute;
+    content: '';
+    background: white;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    transition-duration: 400ms;
+    z-index: 0;
+}
+
+.whiteShadow:hover::after {
+    transform: translateX(100%);
+}
+
+.fade-out {
+    opacity: 0;
+    transition: 1s all ease-out;
+
+}
+
+#view-work-btn {
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0);
+    }
+    20 {
+        transform: translateY(15px);
+    }
+    40% {
+        transform: translate(0);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translate(0);
+    }
+    20 {
+        transform: translateY(15px);
+    }
+    40% {
+        transform: translate(0);
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+}
+
+.card {
+    padding: 2em;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+}
+
+.card img {
+    width: auto;
+    border-radius: 10px;
+}
