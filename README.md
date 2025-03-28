@@ -1,0 +1,1 @@
+This project usees the OpenAI API to create AI generated iamges based on user input. I personally utilize this app with a Raspberry Pi 4 Module B, which outputs to a small display on my desk as a unnique touch of decoration.
